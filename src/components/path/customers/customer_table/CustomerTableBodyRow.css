@@ -1,0 +1,27 @@
+.ct-body__tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.ct-body__tr:hover {
+    background-color: #dee2e6;
+}
+
+.ct-body__tr.checked {
+    background-color: #dee2e6;
+}
+
+.ct-body__tr .ct-header__td {
+    padding: 7px 10px;
+    font-size: 15px;
+}
+
+.ct-body__tr .ct-header__td:first-child {
+    text-align: center;
+}
+
+
+@media (max-width: 760px) {
+    .ct-body__tr .ct-header__td {
+        font-size: 9px;
+    }
+}

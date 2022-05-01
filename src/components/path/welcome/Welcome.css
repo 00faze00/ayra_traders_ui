@@ -1,0 +1,30 @@
+.welcome-section {
+  width: 100%;
+  margin: 30px 0;
+  padding: 30px 0;
+}
+
+.welcome-section .welcome-section__container {
+  text-align: center;
+  background-color: #272727;
+  margin: 0 15%;
+  padding: 5% 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.welcome-section .welcome-section__container h1 {
+  transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .welcome-section .welcome-section__container h1 {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome-section .welcome-section__container h1 {
+    font-size: small;
+  }
+}

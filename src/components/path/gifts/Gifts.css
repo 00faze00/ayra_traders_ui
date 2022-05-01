@@ -1,0 +1,35 @@
+.gifts-wrapper {
+    width: 100%;
+}
+
+.gifts-wrapper .gifts-wrapper_container {
+    padding: 20px;
+}
+
+.gifts-wrapper_container .gifts-heading {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 15px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gifts-wrapper_container .gifts-heading .add-gift {
+    border-radius: 7px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gifts-wrapper_container .gifts-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 20px;
+    justify-content: center;
+    width: 100%;
+    transition: all 0.5s;
+    margin-top: 50px;
+}

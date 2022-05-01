@@ -1,0 +1,20 @@
+.ct-header__tr {
+    text-align: left;
+    background-color: #e9ecef;
+}
+
+.ct-header__tr .ct-header__th {
+    padding: 7px 10px;
+}
+
+.ct-header__tr .ct-header__th:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    max-width: 30px;
+}
+
+@media (max-width: 760px) {
+    .ct-header__tr .ct-header__th {
+        font-size: 12px;
+    }
+}

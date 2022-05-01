@@ -1,0 +1,93 @@
+
+/* Gift Item css start here */
+
+.gifts-wrapper_container .gifts-items .gifts-item {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.gifts-wrapper_container .gifts-items .gifts-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gifts-wrapper_container .gifts-items .gifts-item .gifs-item__tbody {
+    padding: 10px;
+}
+
+.gifts-wrapper_container .gifts-items .gifts-item .gifs-item__tbody h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.gifts-wrapper_container .gifts-items .gifts-item .gifs-item__tbody p {
+    font-size: 14px;
+}
+
+.gifs-item__tbody .gift-item_tbody-metric{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gifs-item__tbody .gift-item_tbody-metric p:nth-child(2) {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 9px;
+    /* transform: rotate(20deg); */
+}
+
+
+.link {
+    color: #fff;
+}
+
+.gifts-wrapper_container .gifts-items .gifts-item.gift-expand{
+    grid-column: span 3;
+    transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 460px) {
+    .gifts-wrapper_container .gifts-items .gifts-item.gift-expand{
+       grid-column: span 1;
+    }
+}
+
+.gift-item__edit-form {
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+    .gift-item__edit-form {
+        flex-direction: column;
+    }
+}
+
+.gift-item__edit-form input {
+    font-size: 13px;
+    padding: 5px;
+    margin: 10px;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+.gift-item__edit-form input:focus {
+    outline: none;
+}
+
+.gift-item__edit-form__buttons {
+    padding: 0 0 10px 10px;
+}
+
+.gift-item__edit-form__buttons button{
+    margin: 0 5px;
+    padding: 5px;
+    background-color: #252525;;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+}

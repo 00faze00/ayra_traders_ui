@@ -1,0 +1,122 @@
+.navbar-container {
+  width: 100%;
+  min-width: 300px;
+  background-color: var(--navbar_bgcolor);
+}
+
+.navbar-container__holder {
+  width: 80%;
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+  align-items: center;
+}
+
+.navbar-container__holder.container {
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-container__holder {
+    width: 90%;
+  }
+
+  .navbar-container__holder.container {
+    padding: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-options {
+    display: none;
+  }
+}
+
+.navbar-logo a {
+  color: #fff;
+}
+
+.navbar-options ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.navbar-options ul li {
+  color: #fff;
+  display: block;
+}
+
+.navbar-options ul li a {
+  color: #ccc;
+}
+
+.navbar-options ul li a.active {
+  color: #fff;
+}
+
+.navbar-container__holder .hamburger-lines {
+  height: 26px;
+  width: 32px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container__holder .hamburger-lines {
+    display: flex;
+  }
+}
+
+.navbar-container__holder .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.navbar-container__holder .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-container__holder .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-container__holder .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hamburger-lines.clicked .line1 {
+  transform: rotate(45deg);
+}
+
+.hamburger-lines.clicked .line2 {
+  transform: scaleY(0);
+}
+
+.hamburger-lines.clicked .line3 {
+  transform: rotate(-45deg);
+}
+
+.hamburger-lines.clicked + .navbar-options {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: var(--navbar_bgcolor);
+}
+
+.hamburger-lines.clicked + .navbar-options ul {
+  flex-direction: column;
+  padding: 15px;
+}

@@ -1,0 +1,33 @@
+.customers-wrapper {
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.customers-wrapper .customers-wrapper__container {
+  padding: 20px;
+}
+
+.customers-wrapper .customers-wrapper__container .customers-header {
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.customers-wrapper .customers-wrapper__container .customers-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.customers-wrapper .customers-wrapper__container .customers-body {
+  padding: 15px 5%;
+  width: 100%;
+}
+
+.customers-wrapper .customers-wrapper__container .customer-bottomtoolbar {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 5%;
+  padding: 15px 5%;
+  z-index: 1000;
+}

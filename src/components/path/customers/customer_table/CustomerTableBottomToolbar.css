@@ -1,0 +1,23 @@
+.ct-b-toolbar__wrapper {
+    width: 100%;
+    background-color: #252525;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+
+.ct-b-toolbar__wrapper .ct-b-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ct-b-toolbar__wrapper .ct-b-toolbar .ctbt-info {
+    display: flex;
+    gap: 5px;
+}
+
+.ct-b-toolbar__wrapper .ct-b-toolbar .ctbt-options .ctbt-del-btn {
+    display: flex;
+    gap: 10px
+}

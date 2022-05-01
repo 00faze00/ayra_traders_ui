@@ -1,0 +1,43 @@
+.ct-editform__wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 2000;
+}
+
+.ct-editform__wrapper .ct-editform-body {
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    padding: 10px 5%;
+}
+
+.ct-editform__wrapper .ct-editform-body .customer-edit-form {
+    border-radius: 7px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 1px 2px #999;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-inputs {
+    display: flex;
+    gap:10px;
+}
+
+.ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-inputs input {
+    padding: 5px;
+}
+
+.ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-buttons {
+    display: flex;
+    gap: 10px;
+}

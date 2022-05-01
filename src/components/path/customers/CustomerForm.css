@@ -1,0 +1,88 @@
+.customers-form {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 2px 1px #000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.customers-form.isVisible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.customers-form .customers-form__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 450px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+.customers-form .customers-form__body .cusform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.customers-form .customers-form__body .cusform .cusform-grp__input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.customers-form .customers-form__body .cusform .cusform-grp__input label {
+  font-size: 15px;
+  text-align: left;
+}
+
+.customers-form .customers-form__body .cusform .cusform-grp__input input {
+  padding: 3px;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border: 1px solid #000;
+}
+
+.customers-form
+  .customers-form__body
+  .cusform
+  .cusform-grp__input
+  input::-webkit-outer-spin-button,
+.customers-form
+  .customers-form__body
+  .cusform
+  .cusform-grp__input
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.customers-form .customers-form__body .cusform .cusform-grp__input input:focus {
+  box-shadow: 0px 1px 1px rgb(182, 182, 182);
+  outline: none;
+}
+
+.customers-form .customers-form__body .cusform .cusform-grp-btn {
+  align-self: flex-end;
+}
+
+.customers-form
+  .customers-form__body
+  .cusform
+  .cusform-grp-btn
+  .cusform-submit {
+  margin-right: 5px;
+}
