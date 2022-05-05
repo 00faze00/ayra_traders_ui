@@ -10,7 +10,6 @@ const CustomerEditForm = ({ custData, refereshCusts, setEditClicked }) => {
     const [customerId, setCustomerId] = useState(custData[0].custid);
     const [customerEmail, setCustomerEmail] = useState(custData[0].custemail);
     const [customerNumber, setCustomerNumber] = useState(custData[0].custnum);
-    const [customerPoints, setCustomerpoints] = useState(custData[0].custpoints);
 
     const customerNameChangeHandler= (event) => {
         setCustomerName(event.target.value);
@@ -24,10 +23,6 @@ const CustomerEditForm = ({ custData, refereshCusts, setEditClicked }) => {
         setCustomerNumber(event.target.value);
     };
 
-    const customerPointsChangeHandler= (event) => {
-        setCustomerpoints(event.target.value);
-    };
-
     const customerEditFormSubmitHandler = async (event) => {
         event.preventDefault();
 
@@ -36,7 +31,6 @@ const CustomerEditForm = ({ custData, refereshCusts, setEditClicked }) => {
             custId: customerId,
             custEmail: customerEmail,
             custNumber: customerNumber,
-            custPoints: customerPoints, 
         };
 
         await axios.post("/customers/edit_customer", getData).then(res => console.log(res)).catch(err => console.log(err));
@@ -60,7 +54,6 @@ const CustomerEditForm = ({ custData, refereshCusts, setEditClicked }) => {
                         <input type="text" value={customerName} onChange={customerNameChangeHandler} />
                         <input type="text" value={customerEmail} onChange={customerEmailChangeHandler} />
                         <input type="number" value={customerNumber} onChange={customerNumberChangeHandler} />
-                        <input type="number" value={customerPoints} onChange={customerPointsChangeHandler} />
                     </div>
                     <div className="cef-buttons">
                         <button className="button">Submit</button>

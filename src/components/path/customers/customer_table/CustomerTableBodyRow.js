@@ -5,31 +5,28 @@ import PropTypes from "prop-types";
 import './CustomerTableBodyRow.css';
 
 const CustomerTableBodyRow = ({ custId, custName, custEmail, custNumber, custPoints, setSelectedRows, selectedRowsId, setSelectedRowsId }) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState();
+  // const [isCustInRows, setIsCustInRows] = useState(true);
   const checkboxChangeHandler = (event) => {
-    const tempBool = selectedRowsId.includes(custId);
-    console.log(tempBool, isChecked);
-    setIsChecked(curr => {
-      if (!tempBool) {
-        return curr = true;
-      } else {
-        return curr = false;
-      }
-    });
-    if (isChecked === false) {
-      setSelectedRows((revState) => {
-        return ++revState;
-      });
-      setSelectedRowsId(curr => [...curr, custId]);
+
+    let iscbChecked = event.target.checked;
+    let tempBool = selectedRowsId.includes(custId);
+    setIsChecked(iscbChecked);
+    if (iscbChecked && !tempBool) {
+      setSelectedRows(prevState => ++prevState);
+      setSelectedRowsId(prevState => [...prevState, custId]);
     } else {
-      setSelectedRows((revState) => {
-        return --revState;
-      });
-      setSelectedRowsId(curr => {
-        return curr.filter(item => item !== custId);
+      setSelectedRows(prevState => --prevState);
+      setSelectedRowsId(prevState => {
+        return prevState.filter(item => item !== custId);
       });
     }
   };
+  // useEffect(() => {
+  //   let seeIs = selectedRowsId.includes(custId);
+  //   setIsChecked(seeIs);
+  //   setIsCustInRows(false);
+  // }, [isCustInRows]);
   return (
     <tr key={custId} className={ "ct-body__tr " +  (isChecked ? "checked" : "")}>
       <td className="ct-header__td"><input type="checkbox" onChange={checkboxChangeHandler} /></td>

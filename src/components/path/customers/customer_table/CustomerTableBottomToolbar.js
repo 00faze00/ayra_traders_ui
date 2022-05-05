@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 
 import CustomerEditForm from "./CustomerEditForm";
+import CustomerAddPoints from "./customer_add_points/CustomerAddPonits";
 
 import "./CustomerTableBottomToolbar.css";
 
@@ -10,6 +11,7 @@ const CustomerTableBottomToolbar = ({ rowSelected, setSelectedRows, selectedRows
 
   const [custData, setCustData] = useState();
   const [editClicked, setEditClicked] = useState(false);
+  const [addPointsClicked, setAddPointsClicked] = useState(false);
   
   const custDeleteHandler = (event) => {
     const tempArray = selectedRowsId;
@@ -26,10 +28,18 @@ const CustomerTableBottomToolbar = ({ rowSelected, setSelectedRows, selectedRows
   const custEditHandler = async (event) => {
     const id = selectedRowsId[0];
     const res = await axios.get("/customers/"+id);
-    const data = res.data;
-    setCustData(data);
+    const data  = await res.data;
+    setCustData(res.data);
     setEditClicked(true);
-    // console.log(data); 
+    // console.log(id); 
+  };
+
+  const custAddPointsHandler = async (event) => {
+    const id = selectedRowsId[0];
+    const res = await axios.get("/customers/"+id);
+    const data  = await res.data;
+    setCustData(res.data);
+    setAddPointsClicked(true);
   };
 
   return (
@@ -38,6 +48,9 @@ const CustomerTableBottomToolbar = ({ rowSelected, setSelectedRows, selectedRows
         <div>
           {
             editClicked && <CustomerEditForm custData={custData} refereshCusts={refereshCusts} setEditClicked={setEditClicked} />
+          }
+          {
+            addPointsClicked && <CustomerAddPoints />
           }
           <div className="ct-b-toolbar__wrapper">
             <div className="ct-b-toolbar">
@@ -62,6 +75,15 @@ const CustomerTableBottomToolbar = ({ rowSelected, setSelectedRows, selectedRows
                       onClick={custEditHandler}
                     >
                       Edit
+                    </button>
+                  )}
+                  {rowSelected === 1 && (
+                    <button
+                      className="button"
+                      style={{ backgroundColor: "#fff", color: "#000" }}
+                      onClick={custAddPointsHandler}
+                    >
+                      Add Points
                     </button>
                   )}
                 </div>
