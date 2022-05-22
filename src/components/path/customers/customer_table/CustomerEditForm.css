@@ -18,7 +18,7 @@
 
 .ct-editform__wrapper .ct-editform-body .customer-edit-form {
     border-radius: 7px;
-    padding: 10px;
+    padding: 20px 10px;
     width: 100%;
     box-shadow: 0px 0px 1px 2px #999;
     background-color: #fff;
@@ -35,6 +35,17 @@
 
 .ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-inputs input {
     padding: 5px;
+}
+
+@media (max-width: 760px) {
+    .ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-inputs {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-inputs input {
+        margin: 0 20px;
+    }
 }
 
 .ct-editform__wrapper .ct-editform-body .customer-edit-form .cef-buttons {

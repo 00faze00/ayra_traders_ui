@@ -1,0 +1,123 @@
+.customeraddpoints-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2000;
+    top:0;
+    left:0;
+    padding: 0 5%;
+    background-color: rgba(0,0,0,0.18);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.customeraddpoints-wrapper.hidden {
+    visibility: hidden;
+}
+
+.customeraddpoints-wrapper .customeraddpoints {
+    padding: 70px 0;
+    height: 100%;
+}
+
+.customeraddpoints-wrapper .customeraddpoints .customeraddpoints-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.customeraddpoints-wrapper .customeraddpoints .customeraddpoints-form .cancel-form {
+    align-self: end;
+    padding: 5px 9px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out ;
+}
+
+.customeraddpoints-wrapper .customeraddpoints .customeraddpoints-form .cancel-form:hover {
+    background-color: rgb(231, 119, 119);
+}
+
+.customeraddpoints-wrapper .customeraddpoints .customeraddpoints-form .customeraddtransactions-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 0px 6px 2px #ccc ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.customeraddpoints-wrapper .customeraddpoints .customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-submit {
+    align-self: end;
+}
+
+.customeraddpoints-wrapper .customeraddpoints .customeraddpoints-form .customeraddtransactions-wrapper .custaddtrans {
+    margin: 10px;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddtrans .custaddtran__inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddtrans .custaddtran__inputs .custaddtran__input input {
+    padding: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddtrans .custaddtran__inputs .custaddtran__btn button {
+    font-size: 11px;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 2px 1px #ccc inset;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-wrapper .custaddedtrans {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-wrapper .custaddedtrans .custaddedtran {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 7px;
+    box-shadow: 0px 0px 3px 1px #ccc;
+    padding: 5px;
+    align-items: center;
+}
+
+.customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-wrapper .custaddedtrans .custaddedtran .custaddedtran__details {
+    list-style: none;
+    display: flex;
+    gap:10px;
+}
+
+/* .customeraddpoints-form .customeraddtransactions-wrapper .custaddedtrans-wrapper .custaddedtrans .custaddedtran .custaddedtran__del {
+    align-self: end;
+} */

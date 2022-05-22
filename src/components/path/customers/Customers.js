@@ -23,7 +23,6 @@ const Customers = () => {
 
   const fetchAllCustomers = () => {
     axios.get('/customers').then(res => {
-      // console.log(res);
       setCustomers(res.data);
     }).catch(err => console.log(err));
   };
@@ -31,7 +30,6 @@ const Customers = () => {
   useEffect(() => {
       fetchAllCustomers();
       setCount(false);
-      // console.log(selectedRowsId);
   }, [count]);
 
   return (

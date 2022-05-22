@@ -10,7 +10,6 @@ const CustomerForm = ({ isVisible, visibilityChangeHandler, refereshCusts }) => 
   const [cusName, setCusName] = useState("");
   const [cusEmail, setCusEmail] = useState("");
   const [cusNumber, setCusNumber] = useState("");
-  const [cusPoints, setCusPoints] = useState("");
 
   const cusNameChangeHandler = (event) => {
     setCusName(event.target.value);
@@ -24,15 +23,10 @@ const CustomerForm = ({ isVisible, visibilityChangeHandler, refereshCusts }) => 
     setCusNumber(event.target.value);
   };
 
-  const cusPointsChangeHandler = (event) => {
-    setCusPoints(event.target.value);
-  };
-
   const clearAllHandlers = () => {
     setCusName("");
     setCusEmail("");
     setCusNumber("");
-    setCusPoints("");
   };
 
   const cusSubmitHandler = (event) => {
@@ -43,7 +37,6 @@ const CustomerForm = ({ isVisible, visibilityChangeHandler, refereshCusts }) => 
         "custName": cusName,
         "custEmail": cusEmail,
         "custNumber": cusNumber,
-        "custPoints": cusPoints,
       };
   
       axios.post("/customers/add_customer", customerData).then(res => console.log(res)).catch(err => console.log(err));
@@ -75,10 +68,6 @@ const CustomerForm = ({ isVisible, visibilityChangeHandler, refereshCusts }) => 
           <div className="cusform-grp__input">
             <label>Customer Number</label>
             <input type="number" value={cusNumber} onChange={cusNumberChangeHandler} />
-          </div>
-          <div className="cusform-grp__input">
-            <label>Customer Points</label>
-            <input type="number" value={cusPoints} onChange={cusPointsChangeHandler} />
           </div>
           <div className="cusform-grp-btn">
               <button type="submit" className="button cusform-submit" >Add Customer</button>

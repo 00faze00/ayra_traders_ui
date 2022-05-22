@@ -13,7 +13,6 @@ const CustomerTableBody = ({ tableData, setSelectedRows, selectedRowsId, setSele
           custName={customer.custname}
           custEmail={customer.custemail}
           custNumber={customer.custnum}
-          custPoints={customer.custpoints}
           setSelectedRows={setSelectedRows}
           selectedRowsId={selectedRowsId}
           setSelectedRowsId={setSelectedRowsId}
